@@ -1,0 +1,15 @@
+@import '../../../helper.scss';
+@import '../../Pay.module.scss';
+
+.recent {
+  padding-bottom: 120px;
+
+  .item {
+    pointer-events: none;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+}

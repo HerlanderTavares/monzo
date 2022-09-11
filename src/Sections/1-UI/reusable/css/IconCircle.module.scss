@@ -1,0 +1,24 @@
+@import '../../../helper.scss';
+
+.icon-circle {
+  aspect-ratio: 1 / 1;
+  @include flex-center;
+  border-radius: 50%;
+  background-color: color(main);
+
+  span {
+    font-weight: weight(bold);
+    color: white;
+    pointer-events: none;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+    background-color: darken(color(disabled), 10%) !important;
+  }
+}
+
+button.icon-circle:active {
+  transform: scale(0.8);
+}

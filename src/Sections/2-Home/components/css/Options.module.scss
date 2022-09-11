@@ -1,0 +1,55 @@
+@import '../../../helper.scss';
+
+.options {
+  width: 100%;
+  margin-bottom: 50px;
+
+  &-section {
+    margin-bottom: 5rem;
+
+    &:last-child {
+      margin-bottom: 13rem;
+    }
+  }
+
+  &__container {
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    font-size: 1.6rem;
+  }
+
+  &__copy {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: weight(bold);
+    color: color(main);
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &__action {
+    font-size: 1.6rem;
+  }
+}

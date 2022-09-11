@@ -1,0 +1,31 @@
+@import '../../../helper.scss';
+
+.item {
+  background-color: white;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  padding: 0 2rem;
+  min-height: 0;
+  aspect-ratio: 1 / 0.22;
+  box-shadow: 0 0.3rem 0.5rem rgba(black, 0.2);
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+
+    & > * {
+      color: darken(color(disabled), 25%);
+    }
+  }
+}
+
+button.item {
+  & > * {
+    pointer-events: none;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../helper.scss';
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  border-top: solid 1px #e5e5e5;
+
+  span {
+    pointer-events: none;
+  }
+
+  &:last-child {
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    span {
+      color: darken(color(disabled), 10%);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../helper.scss';
+
+.account {
+  @include flex($dir: column);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 120px;
+  gap: 4rem;
+
+  &__block {
+    @include flex(center, center, column);
+
+    & > * {
+      margin-bottom: 0.5rem;
+      &:not(:first-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &.change > * {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: weight(bold);
+    font-size: 1.2rem;
+    align-self: start;
+  }
+
+  &__options {
+    span {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__info {
+    @include flex($dir: column, $ver: start);
+    height: 100%;
+    justify-content: center;
+    line-height: 1;
+    gap: 17%;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    font-weight: weight(bold);
+  }
+
+  &__details {
+    font-size: 1.2rem;
+  }
+
+  &__amount {
+    font-weight: weight(bold);
+    font-size: 1.5rem;
+    margin-left: auto;
+  }
+}

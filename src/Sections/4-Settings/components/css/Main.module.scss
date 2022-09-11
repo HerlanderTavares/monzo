@@ -1,0 +1,61 @@
+@import '../../../helper.scss';
+.main {
+  margin-bottom: 150px;
+  &__option {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+}
+
+.features {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: color(grey-bkg);
+  padding: 15% 2rem 150px;
+  @include flex($ver: center, $dir: column);
+  font-size: 1.7rem;
+  line-height: 1.5;
+  overflow-y: scroll;
+
+  & > * {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: color(main);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  &__block {
+    width: 100%;
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: darken(color(main), 30%);
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+
+    li {
+      &::marker {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

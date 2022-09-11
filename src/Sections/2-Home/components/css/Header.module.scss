@@ -1,0 +1,24 @@
+@import '../../../helper.scss';
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 2rem;
+  padding: $header-pad;
+
+  span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: weight(bold);
+  }
+
+  .btn {
+    transform: translateY(-60%);
+
+    &:active {
+      transform: translateY(-60%) scale(0.9);
+    }
+  }
+}

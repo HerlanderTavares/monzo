@@ -1,0 +1,39 @@
+@import './helper.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include query(height) {
+    font-size: 53%;
+  }
+}
+
+body {
+  height: 100vh !important;
+  @include flex-center;
+  font-family: Quicksand, sans-serif;
+  font-size: 1.8rem;
+  font-weight: weight(medium);
+}
+
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

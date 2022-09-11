@@ -1,0 +1,30 @@
+@import '../../../helper.scss';
+
+.header {
+  padding: $header-pad;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include box-shadow(0, 0.3, 1.5, 0.1);
+  padding-left: 0rem;
+  gap: 1rem;
+
+  &__account {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    align-items: start;
+    gap: 0.3rem;
+  }
+
+  &__name {
+    font-weight: weight(bold);
+  }
+
+  &__balance {
+    font-size: 1.2rem;
+    transform: translateX(2%);
+  }
+}

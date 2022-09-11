@@ -1,0 +1,86 @@
+@import '../../../helper.scss';
+
+.receipt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding: 2rem;
+  padding-top: 13%;
+  padding-bottom: 40%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+
+    span {
+      text-transform: uppercase;
+      font-weight: weight(bold);
+      color: color(main);
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon {
+    height: 4rem;
+    aspect-ratio: 1 / 1;
+    background-color: color(main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 1.8rem;
+      font-weight: weight(bold);
+      color: white;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: weight(bold);
+  }
+
+  &__name {
+    font-size: 2.3rem;
+    font-weight: weight(regular);
+  }
+
+  &__info {
+    &-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+    }
+
+    &--title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: weight(regular);
+    }
+
+    &--detail {
+      font-size: 1.8rem;
+    }
+  }
+}

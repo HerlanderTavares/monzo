@@ -1,0 +1,49 @@
+@import '../../../helper.scss';
+
+.trey {
+  &__menu {
+    width: 100%;
+    @include flex($ver: center, $dir: column);
+  }
+
+  &__btn {
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+
+  &__options {
+    background-color: #d9d9d9;
+    border-radius: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+    width: 90%;
+    margin-bottom: 3rem;
+
+    &Btn {
+      width: 50%;
+      border-radius: 100vh;
+      font-size: 1rem;
+      padding: 0.4rem 0;
+      text-transform: uppercase;
+      font-weight: weight(bold);
+      transition: all 300ms ease-in-out;
+
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.open-icon {
+  width: 4rem;
+  height: 0.5rem;
+  background-color: color(main);
+  border-radius: 100vh;
+}

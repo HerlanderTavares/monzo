@@ -1,0 +1,39 @@
+@import '../../../helper.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: weight(bold);
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .item-btn.disabled {
+    opacity: 0.7;
+
+    .payment-main__icon {
+      background-color: color(greyed-out);
+      .icon {
+        fill: white;
+      }
+    }
+  }
+}

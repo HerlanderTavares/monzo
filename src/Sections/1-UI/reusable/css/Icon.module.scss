@@ -1,0 +1,10 @@
+@import '../../../helper.scss';
+
+.icon {
+  pointer-events: none;
+
+  &.disabled {
+    fill: color(disabled) !important;
+    stroke: color(disabled) !important;
+  }
+}

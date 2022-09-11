@@ -1,6 +1,5 @@
 import styles from '../css/Main.module.scss';
-import {css, checkProp} from '../../../helpers';
-import BackBtn from '../../../1-UI/reusable/js/BackBtn';
+import {css} from '../../../helpers';
 import Button from './Button';
 
 export default function Features(props) {

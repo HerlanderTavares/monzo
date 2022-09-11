@@ -1,5 +1,5 @@
 import styles from '../css/Reset.module.scss';
-import {css, checkProp} from '../../helpers';
+import {css} from '../../helpers';
 
 export default function Reset(props) {
   const reset = () => props.reset();

@@ -7,7 +7,6 @@ import Item from '../../../1-UI/reusable/js/Item';
 import BackBtn from '../../../1-UI/reusable/js/BackBtn';
 import Icon from '../../../1-UI/reusable/js/Icon';
 import IconCircle from '../../../1-UI/reusable/js/IconCircle';
-import {users} from '../../../0-API/accounts';
 import {setStorage, setStateStorage} from '../../../0-API/storage';
 
 const Entry = props => {

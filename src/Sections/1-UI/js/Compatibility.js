@@ -1,9 +1,7 @@
 import styles from '../css/Prompt.module.scss';
-import {css, checkProp} from '../../helpers';
+import {css} from '../../helpers';
 
-export default function Compatibility(props) {
-  const close = () => props.close(false);
-
+export default function Compatibility() {
   return (
     <div className={css(styles, 'prompt')}>
       <img

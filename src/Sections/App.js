@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 import {users} from './0-API/accounts';
 import State from './0-API/state';
-import {formatNumber, sortTransactions} from './helpers';
-import {getStorage, setStorage} from './0-API/storage';
+import {sortTransactions} from './helpers';
+import {getStorage} from './0-API/storage';
 
 import Navbar from './1-UI/js/Navbar';
 import Phone from './1-UI/js/Phone';
@@ -13,7 +13,6 @@ import Pay from './3-Pay/Pay';
 import Settings from './4-Settings/Settings';
 import Notification from './1-UI/reusable/js/Notifications';
 import Reset from './1-UI/js/Reset';
-import {type} from '@testing-library/user-event/dist/type';
 import Compatibility from './1-UI/js/Compatibility';
 
 export default function App() {

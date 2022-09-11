@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react';
 import styles from '../css/Main.module.scss';
-import {css, checkProp} from '../../../helpers';
+import {css} from '../../../helpers';
 import Item from '../../../1-UI/reusable/js/Item';
 import Features from './Features';
 import State from '../../../0-API/state';

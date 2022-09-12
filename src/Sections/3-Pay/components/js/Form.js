@@ -52,7 +52,7 @@ export default function Form(props) {
     const obj = {
       ...initObj,
       firstName: name[0],
-      lastName: name[name.length - 1],
+      lastName: name.length > 2 ? name[name.length - 1] : name[1],
       sortCode: sortCode.current.value,
       accountNum: accountNum.current.value,
       amount: +amount.current.value,

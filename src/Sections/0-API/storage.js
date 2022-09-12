@@ -1,9 +1,6 @@
-export const setStorage = (user, accountObj = user) => {
-  localStorage.removeItem(`${user.username}_balance`);
-  localStorage.removeItem(`${user.username}_transactions`);
-  localStorage.setItem(`${user.username}_balance`, JSON.stringify(accountObj['balance']));
-  // prettier-ignore
-  localStorage.setItem(`${user.username}_transactions`, JSON.stringify(accountObj['transactions']));
+export const setStorage = (user, itemName, obj) => {
+  localStorage.removeItem(`${user.username}_${itemName}`);
+  localStorage.setItem(`${user.username}_${itemName}`, JSON.stringify(obj));
 };
 
 export const setStateStorage = state => {

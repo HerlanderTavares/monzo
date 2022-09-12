@@ -7,7 +7,7 @@ import Item from '../../../1-UI/reusable/js/Item';
 import BackBtn from '../../../1-UI/reusable/js/BackBtn';
 import Icon from '../../../1-UI/reusable/js/Icon';
 import IconCircle from '../../../1-UI/reusable/js/IconCircle';
-import {setStorage, setStateStorage} from '../../../0-API/storage';
+import {setStorage, setStateStorage, getStorage} from '../../../0-API/storage';
 
 const Entry = props => {
   return (
@@ -58,9 +58,13 @@ export default function Submit(props) {
         accountNum: sender.accountNum,
       };
 
-      contact.balance += recipientObj.amount;
-      contact.transactions.push(recipientObj);
-      setStorage(contact);
+      let amount = +getStorage(contact, 'balance') || contact.balance;
+      const transactions = getStorage(contact, 'transactions') || contact.transactions;
+      amount += recipientObj.amount;
+      transactions.push(recipientObj);
+
+      setStorage(contact, 'balance', amount);
+      setStorage(contact, 'transactions', transactions);
     }
 
     // Go to confirmation screen

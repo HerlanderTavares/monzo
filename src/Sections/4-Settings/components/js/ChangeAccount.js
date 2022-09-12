@@ -4,8 +4,9 @@ import {css, formatNumber} from '../../../helpers';
 import {Button} from './Account';
 import {users} from '../../../0-API/accounts';
 import State from '../../../0-API/state';
+import {getStorage} from '../../../0-API/storage';
 
-export default function ChangeAccount(props) {
+export default function ChangeAccount() {
   const state = useContext(State);
 
   const allUsers = [];
@@ -18,13 +19,15 @@ export default function ChangeAccount(props) {
 
   for (const user in users) {
     const userAcc = users[user];
+
+    const amount = getStorage(userAcc, 'balance') || userAcc.balance;
     const account = (
       <Button
         key={user}
         data={user}
         label={userAcc.fullName}
         details={`${userAcc.sortCode} • ${userAcc.accountNum}`}
-        amount={formatNumber(userAcc.balance)}
+        amount={formatNumber(amount)}
         onClick={switchUser}
       />
     );

@@ -32,7 +32,6 @@ export default function Features(props) {
       <div className={css(styles, 'features__block')}>
         <h3>Upcoming Features</h3>
         <ul>
-          <li>Mobile compatibility</li>
           <li>Dedicated desktop design</li>
           <li>Saving pots</li>
           <li>Apply for loans and credit</li>

@@ -26,7 +26,6 @@ export default function ChangeAccount() {
         key={user}
         data={user}
         label={userAcc.fullName}
-        details={`${userAcc.sortCode} • ${userAcc.accountNum}`}
         amount={formatNumber(amount)}
         onClick={switchUser}
       />
@@ -41,7 +40,6 @@ export default function ChangeAccount() {
       <Button
         label="Joint Account"
         amount={formatNumber(46962.28)}
-        details={`01-00-01 • ${58462973}`}
         disabled={true}
         color="#d9d9d9"
       />

@@ -29,7 +29,6 @@ export default function Account(props) {
       <div className={css(styles, 'account__block')}>
         <Button
           label="Current Account"
-          details={`${state.user.sortCode} • ${state.user.accountNum}`}
           amount={formatNumber(state.balance)}
           onClick={goToAccount}
         />

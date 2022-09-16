@@ -34,13 +34,35 @@
     border-radius: $newRadius;
   }
 
+  @media (orientation: portrait) {
+    background-color: lightblue;
+    height: 100%;
+    width: 100%;
+    max-height: unset;
+    min-height: 300px;
+    min-width: 300px;
+    aspect-ratio: unset;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+  }
+
   &::before {
     @extend %pseudo;
+
+    @media (orientation: portrait) {
+      background: none;
+    }
   }
 
   &::after {
     @extend %pseudo;
     transform: translateX(-80%) translateY(120%);
+
+    @media (orientation: portrait) {
+      background: none;
+    }
   }
 
   &__border {
@@ -60,6 +82,16 @@
       left: auto;
       right: 0;
       transform: translateX(80%);
+
+      @media (orientation: portrait) {
+        background: none;
+      }
+    }
+
+    @media (orientation: portrait) {
+      background: none;
+      border-radius: 0;
+      padding: 0;
     }
   }
 
@@ -75,6 +107,10 @@
     @media (min-height: 68.75em) {
       border-radius: calc($newRadius - $pad - $borderPad);
     }
+
+    @media (orientation: portrait) {
+      border-radius: 0;
+    }
   }
 
   &__notch {
@@ -89,6 +125,11 @@
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
     z-index: 2000;
+
+    @media (orientation: portrait) {
+      width: 0;
+      background: none;
+    }
   }
 
   &__camera {
@@ -112,6 +153,11 @@
       transform: translate(-50%, -50%);
       opacity: 0.4;
       border-radius: 50%;
+    }
+
+    @media (orientation: portrait) {
+      width: 0;
+      background: none;
     }
   }
 }

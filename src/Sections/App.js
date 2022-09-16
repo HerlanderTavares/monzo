@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {users} from './0-API/accounts';
 import State from './0-API/state';
-import {sortTransactions} from './helpers';
+import {sortTransactions, viewPortHeight} from './helpers';
 import {getStorage} from './0-API/storage';
 
 import Navbar from './1-UI/js/Navbar';
@@ -14,6 +14,8 @@ import Settings from './4-Settings/Settings';
 import Notification from './1-UI/reusable/js/Notifications';
 import Reset from './1-UI/js/Reset';
 import Compatibility from './1-UI/js/Compatibility';
+
+viewPortHeight();
 
 export default function App() {
   //Current User
@@ -112,22 +114,18 @@ export default function App() {
     resetApp: resetApp,
   };
 
-  if (tooSmall) {
-    return <Compatibility />;
-  } else {
-    return (
+  return (
+    <Phone>
       <State.Provider value={state}>
-        <Phone>
-          {loading && <Startup />}
-          {prompt && <Prompt close={setPrompt} />}
-          {resetPage && <Reset reset={resetApp} />}
-          {screen == 'home' && <Home />}
-          {screen == 'pay' && <Pay />}
-          {screen == 'settings' && <Settings />}
-          <Navbar />
-          {isNotifying && <Notification type={notification.type} message={notification.message} />}
-        </Phone>
+        {loading && <Startup />}
+        {prompt && <Prompt close={setPrompt} />}
+        {resetPage && <Reset reset={resetApp} />}
+        {screen == 'home' && <Home />}
+        {screen == 'pay' && <Pay />}
+        {screen == 'settings' && <Settings />}
+        <Navbar />
+        {isNotifying && <Notification type={notification.type} message={notification.message} />}
       </State.Provider>
-    );
-  }
+    </Phone>
+  );
 }

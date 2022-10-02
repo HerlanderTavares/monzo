@@ -118,7 +118,6 @@ export default function App() {
     <Phone>
       <State.Provider value={state}>
         {loading && <Startup />}
-        {prompt && <Prompt close={setPrompt} />}
         {resetPage && <Reset reset={resetApp} />}
         {screen == 'home' && <Home />}
         {screen == 'pay' && <Pay />}

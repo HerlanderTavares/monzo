@@ -19,14 +19,14 @@ function Movement(props) {
   const amountColor = props.user.amount > 0 ? '#56cb29' : null;
 
   return (
-    <Item gap="1" onClick={openReceipt}>
+    <Item gap="1" onClick={openReceipt} className={css(styles, 'feed__container')}>
       <IconCircle size="3" font="1.5">
         {initials}
       </IconCircle>
 
       <div className={css(styles, 'feed__info')}>
         <FeedDate user={props.user} />
-        <span className={css(styles, 'feed__name')}>{name.slice(0, 16)}</span>
+        <span className={css(styles, 'feed__name')}>{name}</span>
       </div>
 
       <span className={css(styles, 'feed__amount')} style={{color: amountColor}}>

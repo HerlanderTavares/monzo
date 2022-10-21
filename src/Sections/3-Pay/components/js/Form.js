@@ -11,7 +11,12 @@ const Input = forwardRef((props, ref) => {
   const disabled = checkProp(props.disabled, false);
 
   return (
-    <ItemBar element="div" disabled={disabled} className={css(styles, 'form__input')}>
+    <ItemBar
+      element="div"
+      disabled={disabled}
+      className={css(styles, 'form__input')}
+      height="5.5rem"
+    >
       <label htmlFor={props.id}>{props.label}</label>
       <input
         type={checkProp(props.type, 'text')}

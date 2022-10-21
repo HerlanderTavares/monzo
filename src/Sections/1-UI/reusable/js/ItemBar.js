@@ -10,6 +10,7 @@ export default function ItemBar(props) {
     gap: props.gap ? `${props.gap}rem` : 0,
     aspectRatio: checkProp(props.ar, '1 / 0.22'),
     padding: props.pad ? props.pad + 'rem' : null,
+    height: checkProp(props.height),
   };
 
   if (props.element == 'div')
